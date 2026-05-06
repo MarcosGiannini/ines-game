@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_base.gd" id="1_enemy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_enemy"]
+radius = 22.0
+
+[node name="EnemyBase" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_enemy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_enemy")
+
+[node name="Visual" type="Polygon2D" parent="."]
+color = Color(0.28, 0.24, 0.38, 1)
+polygon = PackedVector2Array(-22, -10, -15, -22, -2, -15, 10, -23, 22, -8, 18, 16, 0, 22, -19, 15)
