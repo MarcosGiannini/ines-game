@@ -1,171 +1,175 @@
-# Testing Strategy
+# Estrategia De Pruebas
 
-## Purpose
+## Propósito
 
-This document defines how to verify Ines Game as it grows.
+Este documento explica cómo comprobar Ines Game a medida que crece.
 
-Manual testing is required for every phase because movement feel, timing, and emotional tone cannot be validated by code checks alone.
+La prueba manual es obligatoria en cada fase porque la sensación de movimiento, el ritmo y el tono emocional no se pueden validar solo leyendo código.
 
-## Testing Principles
+## Principios De Prueba
 
-- Test one phase at a time.
-- Test the exact approved scope.
-- Always include manual verification instructions.
-- Always check what must not happen.
-- Treat regressions in feel as real bugs.
-- Prefer small test scenes before full level work.
-- Do not rely only on "it runs" as success.
+- Probar una fase cada vez.
+- Probar solo el alcance aprobado.
+- Incluir siempre instrucciones de verificación manual.
+- Comprobar siempre qué NO debe pasar.
+- Tratar los problemas de sensación como errores reales.
+- Preferir pantallas pequeñas de prueba antes de crear niveles completos.
+- No considerar suficiente que "el juego se abre".
 
-## Required Verification Format
+## Formato Obligatorio De Verificación
 
-Every implementation must include:
-
-```text
-MANUAL VERIFICATION
-
-What to run:
-- Exact command, if applicable.
-
-Where to open:
-- Exact Godot scene, document, or project location.
-
-What must happen:
-- Expected behavior.
-
-What must NOT happen:
-- Regressions, crashes, wrong tone, or scope violations.
-```
-
-## Mandatory Manual Validation (Step by Step for Marcos)
-
-Every implementation must include a clear manual validation guide written for Marcos.
-
-Use this exact structure:
+Cada implementación debe incluir un bloque en castellano y nivel principiante:
 
 ```text
-MANDATORY MANUAL VALIDATION (STEP BY STEP FOR MARCOS)
+MANUAL VERIFICACIÓN
 
-Step 1: Open Godot.
-- Launch the Godot editor installed on your computer.
+Paso 1:
+- Abre Godot.
+  Godot es el programa que usamos para crear y probar el juego.
 
-Step 2: Open the project.
-- Select the Ines Game project folder.
+Paso 2:
+- Abre el proyecto "ines-game".
+  El proyecto es la carpeta donde está guardado todo el juego.
 
-Step 3: Open the exact scene.
-- Open `res://scenes/test/MovementTestRoom.tscn` or the scene specified for the phase.
+Paso 3:
+- Abre la escena, documento o lugar exacto que se indique.
+  Una escena es como una pantalla o zona del juego.
 
-Step 4: Run the scene.
-- Press Play Scene or F6.
+Paso 4:
+- Ejecuta la prueba.
+- Explica qué botón pulsar o qué tecla usar.
 
-Step 5: Perform the test actions.
-- List the exact inputs Marcos must press, such as move left, move right, jump, or collide with an enemy.
+Paso 5:
+- Haz las acciones de prueba indicadas.
+- Por ejemplo: moverte, saltar, girar o soltar las teclas.
 
-Step 6: Notice the expected feeling.
-- Describe what Marcos should feel clearly, such as faster acceleration, smoother turning, or better jump rhythm.
+Qué debes notar:
+- Describe el comportamiento esperado con palabras simples.
+- Describe cómo debería sentirse el control o la interacción.
 
-Step 7: Check what must NOT happen.
-- List clear errors, such as crashes, falling through the floor, jitter, broken input, or behavior outside the phase scope.
+Qué NO debe pasar:
+- Describe errores, bloqueos, cambios incorrectos o comportamientos fuera de la fase aprobada.
 ```
 
-Do not assume technical experience. The goal is that Marcos can validate the project without writing code.
+No asumir experiencia técnica. El objetivo es que Marcos pueda validar el proyecto sin escribir código.
 
-## Movement Testing
+## Pruebas De Movimiento
 
-Use `res://scenes/test/MovementTestRoom.tscn`.
-
-Check:
-
-- Ines moves left and right.
-- Acceleration feels fast and responsive.
-- Direction changes feel playful, not sluggish.
-- Ines should not feel designed to stand still.
-- Movement should not depend on enemy state.
-- Movement should not create visible jitter.
-- Movement should not break collision with the floor.
-
-Common movement bugs:
-
-- player slides uncontrollably
-- player stops too abruptly
-- player moves too slowly
-- player cannot reverse direction clearly
-- player falls through floor
-- player gets stuck against simple geometry
-- player script absorbs unrelated logic
-
-## Jump Testing
-
-Use `res://scenes/test/MovementTestRoom.tscn` until a dedicated jump test scene exists.
-
-Check:
-
-- Ground jump triggers reliably.
-- Jump height feels energetic.
-- Horizontal movement remains controllable while jumping.
-- Jump timing feels fair.
-- Buffered or chained jumps, when tuned, feel readable.
-- Jump changes do not make movement heavy.
-
-Common jump bugs:
-
-- jump does not trigger
-- jump triggers multiple times unintentionally
-- jump feels delayed
-- jump cancels horizontal flow
-- jump state gets stuck
-- chain timing is unclear
-
-## Enemy Testing
-
-Use `res://scenes/test/MovementTestRoom.tscn` until a dedicated enemy test scene exists.
-
-Check:
-
-- Enemy detects the player.
-- Enemy transforms when touched with enough flow.
-- Enemy does not use violence, damage, or destruction language.
-- Enemy visual feedback remains soft and safe.
-- Enemy behavior does not control player movement.
-
-Common enemy bugs:
-
-- enemy never transforms
-- enemy transforms with no meaningful player interaction
-- enemy disappears in a way that feels like destruction
-- enemy code depends on player internals too strongly
-- enemy interaction breaks movement
-
-## Regression Testing
-
-Before closing a phase:
-
-- Run the main test scene.
-- Confirm player movement still works.
-- Confirm jump still works.
-- Confirm enemy transformation still works if enemy code was touched.
-- Confirm no future-phase feature was added accidentally.
-- Confirm documentation matches the actual behavior.
-
-## Documentation Testing
-
-For documentation-only phases:
-
-- Read the created or changed documents.
-- Confirm responsibilities are clear.
-- Confirm no document contradicts `AI_MASTER_CONTEXT.md`.
-- Confirm `ROADMAP.md` remains focused on phases, goals, deliverables, validation, status, and summaries.
-- Confirm process rules stay in `AI_WORKFLOW.md`.
-
-## Current Manual Test Target
-
-Default scene:
+Usar:
 
 ```text
 res://scenes/test/MovementTestRoom.tscn
 ```
 
-Default controls:
+Comprobar:
 
-- Move left: `A` or left arrow
-- Move right: `D` or right arrow
-- Jump: `Space`, `W`, or up arrow
+- Ines se mueve a izquierda y derecha.
+- La aceleración se siente rápida y responsiva.
+- Los cambios de dirección se sienten juguetones, no lentos.
+- Ines no parece diseñada para quedarse quieta.
+- El movimiento no depende del estado de enemigos.
+- El movimiento no crea temblores visibles.
+- El movimiento no rompe la colisión con el suelo.
+
+Errores comunes de movimiento:
+
+- Ines se desliza sin control.
+- Ines se detiene demasiado brusco.
+- Ines se mueve demasiado lento.
+- Ines no puede cambiar de dirección claramente.
+- Ines cae a través del suelo.
+- Ines se queda atascada en geometría simple.
+- El script del jugador absorbe lógica que no le corresponde.
+
+## Pruebas De Salto
+
+Usar:
+
+```text
+res://scenes/test/MovementTestRoom.tscn
+```
+
+Hasta que exista una pantalla dedicada de salto, esta pantalla de prueba es suficiente.
+
+Comprobar:
+
+- El salto desde el suelo funciona de forma fiable.
+- La altura del salto se siente energética.
+- El movimiento horizontal sigue siendo controlable mientras Ines salta.
+- El ritmo del salto se siente justo.
+- Los saltos encadenados, cuando se ajusten, se sienten claros.
+- Los cambios de salto no hacen que el movimiento se sienta pesado.
+
+Errores comunes de salto:
+
+- El salto no funciona.
+- El salto se activa varias veces sin querer.
+- El salto se siente tarde.
+- El salto corta demasiado el flow horizontal.
+- El estado de salto se queda bloqueado.
+- El ritmo de encadenar saltos no se entiende.
+
+## Pruebas De Enemigos
+
+Usar:
+
+```text
+res://scenes/test/MovementTestRoom.tscn
+```
+
+Hasta que exista una pantalla dedicada de enemigos, esta pantalla de prueba es suficiente.
+
+Importante: en Phase 2, `EnemyBase` es solo un placeholder técnico de prueba. No representa el sistema final de enemigos.
+
+Comprobar:
+
+- El enemigo detecta al jugador si se toca.
+- El enemigo se transforma cuando se toca con suficiente flow.
+- El enemigo no usa lenguaje de violencia, daño ni destrucción.
+- La respuesta visual del enemigo se mantiene suave y segura.
+- El comportamiento del enemigo no controla el movimiento del jugador.
+
+Errores comunes de enemigos:
+
+- El enemigo nunca se transforma.
+- El enemigo se transforma sin interacción clara del jugador.
+- El enemigo desaparece de una forma que parece destrucción.
+- El código del enemigo depende demasiado de detalles internos del jugador.
+- La interacción con el enemigo rompe el movimiento.
+
+## Pruebas De Regresión
+
+Una regresión es algo que antes funcionaba y ahora se ha roto.
+
+Antes de cerrar una fase:
+
+- Ejecutar la pantalla principal de prueba.
+- Confirmar que el movimiento del jugador sigue funcionando.
+- Confirmar que el salto sigue funcionando.
+- Confirmar la transformación del enemigo solo si se tocó código de enemigos.
+- Confirmar que no se añadió una función de una fase futura por accidente.
+- Confirmar que la documentación coincide con el comportamiento real.
+
+## Pruebas De Documentación
+
+Para fases solo de documentación:
+
+- Leer los documentos creados o modificados.
+- Confirmar que las responsabilidades se entienden.
+- Confirmar que ningún documento contradice `AI_MASTER_CONTEXT.md`.
+- Confirmar que `ROADMAP.md` sigue centrado en fases, objetivos, entregables, validación, estado y resúmenes.
+- Confirmar que las reglas de proceso siguen en `AI_WORKFLOW.md`.
+
+## Objetivo Manual Actual
+
+Pantalla de prueba por defecto:
+
+```text
+res://scenes/test/MovementTestRoom.tscn
+```
+
+Controles por defecto:
+
+- Mover izquierda: `A` o flecha izquierda
+- Mover derecha: `D` o flecha derecha
+- Saltar: `Espacio`, `W` o flecha arriba

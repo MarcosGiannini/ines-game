@@ -1,78 +1,110 @@
 # Ines Game
 
-Ines Game is a fast, fluid 2D platformer built with Godot.
+Ines Game es un juego de plataformas 2D rápido y fluido hecho con Godot.
 
-The game is about movement, imagination, courage, and transforming fear into something gentle. It is inspired by a very active child whose personality is expressed through constant motion, playful jumps, and unstoppable rhythm.
+Godot es el programa que usamos para crear y probar el juego.
 
-Core loop:
+El juego trata sobre movimiento, imaginación, valentía y transformar el miedo en algo amable. Está inspirado en una niña muy activa cuya personalidad se expresa con movimiento constante, saltos juguetones y ritmo imparable.
+
+## Si Quieres Probar El Juego En Tu PC Personal
+
+Empieza aquí:
+
+[GUIA_PC_PERSONAL.md](GUIA_PC_PERSONAL.md)
+
+Esa guía explica paso a paso cómo instalar Godot en Windows, abrir el proyecto `ines-game` y probar la pantalla de movimiento.
+
+No necesitas saber programar para seguirla.
+
+## Idea Central
+
+El ciclo principal del juego es:
 
 ```text
 MOVE -> JUMP -> CHAIN -> FLOW
 ```
 
-## Vision
+Esto significa:
 
-This project is intended to grow as a high-quality commercial game, potentially publishable on Steam or similar platforms.
+- moverse;
+- saltar;
+- encadenar acciones;
+- sentir flow.
 
-It is not being treated as a disposable prototype. Development should prioritize:
+Flow significa que Ines mantiene energía y ritmo, pero sin quitar control al jugador.
 
-- strong movement feel
-- clean architecture
-- modular gameplay systems
-- safe and magical tone
-- non-violent enemy transformation
-- long-term maintainability
+## Visión
 
-## Current State
+Este proyecto debe crecer como un juego comercial de alta calidad, potencialmente publicable en Steam o plataformas similares.
 
-The project currently contains:
+No se trata como un prototipo desechable. El desarrollo debe priorizar:
 
-- a Godot 4 project file
-- a minimal player scene
-- separated movement and jump scripts
-- a base enemy transformation placeholder
-- a minimal movement test room
-- project governance documentation
+- buena sensación de movimiento;
+- arquitectura limpia;
+- sistemas de gameplay modulares;
+- tono mágico y seguro;
+- transformación de enemigos sin violencia;
+- mantenimiento a largo plazo.
 
-## How to Run
+## Estado Actual
 
-1. Install Godot 4.
-2. Open this folder as a Godot project.
-3. Run the main scene.
+El proyecto contiene ahora:
 
-The main scene is:
+- un archivo de proyecto de Godot 4;
+- una escena mínima de la jugadora;
+- scripts separados para movimiento y salto;
+- un placeholder técnico de enemigo;
+- una pantalla mínima de prueba de movimiento;
+- documentación de control del proyecto.
+
+## Cómo Probar Rápido
+
+Si ya tienes Godot abierto:
+
+1. Abre el proyecto `ines-game`.
+2. Abre la escena:
 
 ```text
 res://scenes/test/MovementTestRoom.tscn
 ```
 
-Controls:
+3. Pulsa `Play Scene` o la tecla `F6`.
 
-- Move left: `A` or left arrow
-- Move right: `D` or right arrow
-- Jump: `Space`, `W`, or up arrow
+La escena principal de prueba es:
 
-## Working With AI
+```text
+res://scenes/test/MovementTestRoom.tscn
+```
 
-AI work on this project must follow the project governance files:
+Controles:
+
+- Mover izquierda: `A` o flecha izquierda
+- Mover derecha: `D` o flecha derecha
+- Saltar: `Espacio`, `W` o flecha arriba
+
+Para instrucciones detalladas desde cero, usa [GUIA_PC_PERSONAL.md](GUIA_PC_PERSONAL.md).
+
+## Trabajar Con IA
+
+El trabajo de IA en este proyecto debe seguir estos documentos:
 
 - [AI_MASTER_CONTEXT.md](AI_MASTER_CONTEXT.md)
 - [AI_WORKFLOW.md](AI_WORKFLOW.md)
 - [REHYDRATION_PROTOCOL.md](REHYDRATION_PROTOCOL.md)
 - [ROADMAP.md](ROADMAP.md)
 
-Important rules:
+Reglas importantes:
 
-- Work one phase at a time.
-- Do not jump ahead.
-- Do not add gameplay outside the approved phase.
-- Keep scripts in English.
-- Keep systems modular.
-- Explain changes clearly for Marcos.
-- Every future change must include manual verification steps.
+- Trabajar una fase cada vez.
+- No saltar a fases futuras.
+- No añadir gameplay fuera de la fase aprobada.
+- Mantener los scripts en inglés.
+- Mantener los sistemas modulares.
+- Explicar los cambios claramente para Marcos, en castellano y nivel principiante.
+- Cada cambio futuro debe incluir pasos de verificación manual en castellano.
 
-Before any new AI session acts, it must follow the rehydration protocol and wait for confirmation.
+Antes de que una nueva sesión de IA actúe, debe seguir el protocolo de rehidratación y esperar confirmación.
 
 ## Roadmap
 
-See [ROADMAP.md](ROADMAP.md) for the controlled development phases.
+Consulta [ROADMAP.md](ROADMAP.md) para ver las fases controladas de desarrollo.

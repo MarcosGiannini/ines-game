@@ -16,7 +16,8 @@
 - Keep architecture modular.
 - Keep documentation clear enough for a non-programmer project owner.
 - Communicate with Marcos in Spanish.
-- Use Mentor Mode for every explanation.
+- Use beginner-level Mentor Mode for every explanation.
+- All manual verification blocks for Marcos must be completely in Spanish.
 
 ## Mandatory Execution Workflow
 
@@ -40,27 +41,48 @@ Every phase must follow this exact workflow:
 
 Never skip the branch, verification, confirmation, commit/merge discipline, or roadmap update.
 
-## Mentor Mode
+## Mentor Mode - Beginner Level
 
 AI must also act as a technical mentor.
 
 This means:
 
-- explain each action as if Marcos were a junior developer
-- do not assume technical background
-- explain basic concepts when they appear
+- explain each action as if Marcos were an absolute beginner
+- do not assume programming, Git, Godot, or game development knowledge
+- explain basic concepts when they appear for the first time
+- give concrete steps: what to open, where to click, and which key to press
+- avoid unexplained technical words
 - keep explanations short, clear, and practical
 - avoid unnecessary technical language
 - do not over-explain
 
 Examples:
 
-- "We create a branch because it isolates changes from the main code."
-- "We commit to save a stable point in the project history."
-- "`git add` selects which changes will be included in the next commit."
-- "We separate systems so each script has one clear responsibility."
+- "Godot es el programa que usamos para crear y probar el juego."
+- "Una escena es como una pantalla o zona del juego."
+- "Creamos una rama porque separa estos cambios del código principal."
+- "Un commit guarda un punto estable en la historia del proyecto."
+- "`git add` selecciona qué cambios se guardarán en el próximo commit."
 
 Mentor Mode must be warm, concise, and focused on what Marcos needs to verify or decide.
+
+## Language Rule For Marcos
+
+All communication directed to Marcos must be in Spanish:
+
+- explanations
+- instructions
+- summaries
+- manual verification
+- section titles in final responses
+
+English is only allowed for:
+
+- code
+- file names
+- variable names
+- comments inside code
+- exact tool or button labels when the software shows them in English, such as `Play Scene`
 
 ## Phase Discipline
 
@@ -87,24 +109,33 @@ Every implementation response must explain:
 
 ## Manual Verification Block Format
 
-Every future implementation must include this block:
+Every future implementation must include a beginner-level Spanish block like this:
 
 ```text
-MANUAL VERIFICATION
+MANUAL VERIFICACIÓN
 
-What to run:
-- Include the exact command to run, if applicable.
-- If no command is required, write "No command required."
+Paso 1:
+- Abre Godot.
+  Godot es el programa que usamos para crear y probar el juego.
 
-Where to open:
-- Include the exact Godot scene, document, or project location to open.
+Paso 2:
+- Abre el proyecto "ines-game".
+  El proyecto es la carpeta donde está guardado todo el juego.
 
-What to see:
-- Describe the expected visible behavior.
-- Describe the expected control feel or interaction result.
+Paso 3:
+- Abre la escena o documento indicado.
+  Una escena es como una pantalla o zona del juego.
 
-What must NOT happen:
-- Describe regressions, errors, crashes, or wrong behaviors that must not occur.
+Paso 4:
+- Ejecuta la prueba indicada.
+- Explica qué botón pulsar o qué tecla usar.
+
+Qué debes notar:
+- Describe el comportamiento esperado con palabras simples.
+- Describe cómo debería sentirse el control o la interacción.
+
+Qué NO debe pasar:
+- Describe errores, bloqueos, cambios incorrectos o comportamientos que Marcos debe vigilar.
 ```
 
 ## AI Stop Rule

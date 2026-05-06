@@ -1,11 +1,11 @@
 class_name PlayerMovement
 extends RefCounted
 
-var max_speed: float = 430.0
-var acceleration: float = 2800.0
-var air_acceleration: float = 1900.0
-var minimum_flow_speed: float = 130.0
-var turn_boost: float = 1.2
+var max_speed: float = 460.0
+var acceleration: float = 3600.0
+var air_acceleration: float = 2400.0
+var minimum_flow_speed: float = 95.0
+var turn_boost: float = 1.45
 
 func apply_horizontal_velocity(
 	velocity: Vector2,
