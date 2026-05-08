@@ -18,7 +18,37 @@ Próxima nota:
 
 ## Entradas
 
-### 2026-05-08 - Phase 4 - Enemy Interaction Iteration 1 - READY FOR TESTING
+### 2026-05-08 - Phase 4 - Enemy Interaction Iteration 2 - ✅ COMPLETE
+
+**Estado:** Transformation feels real, deliberate, and memorable. Phase 4 confirmed complete.
+
+**Cambios implementados (respecto a Iter 1):**
+- Duración: 0.5s → **1.0s** (2x más lenta para sentir más deliberado)
+- Escala máxima: 1.2 → **1.5** (50% más expansión para mayor impacto visual)
+
+**Sensación después de cambios:**
+- Transformación "épica" en lugar de rápida
+- Expansión más dramática (crece bastante más)
+- Se siente como un acto importante, no un cambio superficial
+
+**Feedback de Marcos:**
+- ✅ "La transformación se siente real"
+- ✅ "Mola" (positivo)
+- ✅ Iteración B (lenta + dramática) fue la ganadora
+
+**Validación completa:**
+1. ✅ Transformación suave (0-1.0s transición)
+2. ✅ Escala dramática (1.0 → 1.5 → 1.0)
+3. ✅ Sonido feedback activo
+4. ✅ Enemigo permanece transformado
+5. ✅ Se siente transformación, no destrucción
+6. ✅ Sin lag, crashes, ni errores técnicos
+
+**Conclusión:** Phase 4 está listo. Transformación comunica claramente el cambio emocional sin violencia. Flujo es sencillo, intuitivo, y memorable.
+
+---
+
+### 2026-05-08 - Phase 4 - Enemy Interaction Iteration 1 - ARCHIVED (READY FOR TESTING)
 
 **Estado:** Enemy transformation enriquecida. Awaiting manual verification en PC de Marcos.
 
