@@ -1,171 +1,197 @@
 # Guía Para Probar Ines Game En Tu PC Personal
 
-Esta guía es para Marcos del futuro.
+**Esta guía es para Marcos, en Windows, para Phase 2**.
 
-Objetivo: instalar Godot en Windows, abrir el proyecto `ines-game` y probar la pantalla de movimiento de Ines paso a paso.
+Objetivo: Instalar Godot 4, descargar el proyecto `ines-game` y probar cómo se siente el movimiento de Ines.
 
-No necesitas saber programar para seguir esta guía.
+**No necesitas saber programar. Es solo pasos mechánicos.**
 
-## Antes De Empezar
+---
 
-Godot es el programa que usamos para crear y probar el juego.
+## Qué Esperar
 
-Un proyecto es la carpeta donde está guardado todo el juego.
+La guía tiene 8 pasos. Cada uno es independiente. Si algo no funciona, PARATE y dile a la IA, no continúes.
 
-Una escena es como una pantalla o zona del juego. En este caso vamos a abrir una pantalla de prueba llamada `MovementTestRoom.tscn`.
+1. **Pasos 1-2:** Descargar e instalar Godot (programita que usamos para crear el juego)
+2. **Pasos 3-5:** Conseguir el proyecto y abrirlo en Godot
+3. **Pasos 6-8:** Ejecutar el juego y probar cómo se mueve Ines
+
+**Duración:** 30-45 minutos (depende de tu internet).
+
+---
+
+## Términos Básicos (Léelos rápido)
+
+- **Godot:** El programa que usamos para crear y probar el juego.
+- **Proyecto:** La carpeta donde está guardado TODO del juego.
+- **Escena:** Una "pantalla" o "zona" del juego. Aquí abriremos una escena de prueba.
+- **Script:** Código que hace que las cosas se muevan (no necesitas leerlo).
 
 ## Paso 1: Instalar Godot En Windows
 
-1. Abre tu navegador de internet.
-2. Entra en la web oficial:
+Windows es el sistema operativo que usamos.
 
-```text
+1. Abre tu navegador de internet.
+2. Entra en la web oficial de Godot:
+
+```
 https://godotengine.org/download/windows/
 ```
 
-3. Descarga Godot 4.
-4. Si ves varias opciones, elige la versión normal de Godot 4 para Windows.
-5. Cuando termine la descarga, abre el archivo descargado.
-6. Si Windows pregunta si quieres permitir abrir la aplicación, acepta.
+3. **Busca el botón para descargar Godot 4.**
+   - Si ves varias opciones, elige la versión "normal" (no las especiales).
+   - Descarga el archivo `.exe` o la versión ejecutable.
 
-Godot no suele necesitar instalación complicada. Normalmente se abre directamente.
+4. Cuando termine la descarga, haz doble clic en el archivo descargado.
+5. Si Windows pregunta "¿Permitir que esta app haga cambios?" → **SÍ, permite.**
+6. Godot se abrirá automaticamente. No necesita instalación complicada.
 
-Si no consigues abrir Godot, para aquí y díselo a la IA antes de continuar.
+**Si Godot se abre:** ✅ Perfecto. Ciérralo y continúa al Paso 2.
 
-## Paso 2: Conseguir La Carpeta Del Proyecto
+**Si ves error o no se abre:** ❌ Para aquí. Haz screenshot del error y dile a la IA.
 
-Necesitas tener en tu PC una carpeta llamada `ines-game`.
+## Paso 2: Conseguir La Carpeta Del Proyecto En Tu PC
 
-Opción fácil si usas GitHub desde el navegador:
+Necesitas descargar una carpeta llamada exactamente `ines-game`.
 
-1. Abre la página del proyecto en GitHub.
-2. Pulsa el botón verde `Code`.
-3. Pulsa `Download ZIP`.
-4. Cuando termine la descarga, descomprime el archivo ZIP.
-5. Busca la carpeta descomprimida del proyecto.
-6. Si la carpeta tiene otro nombre parecido, puedes renombrarla a `ines-game`.
+**Opción A: Fácil (SIN Git)**
 
-Opción si ya sabes usar Git:
+Si no sabes usar Git, usa esta manera:
 
-1. Abre una terminal.
-2. Clona el repositorio del proyecto.
-3. Entra en la carpeta `ines-game`.
+1. Abre tu navegador.
+2. Entra en GitHub: <https://github.com/MarcosGiannini/ines-game>
+   - (O pídele el enlace a la IA si no aparece)
+3. Busca un botón verde que dice **`Code`**.
+4. Haz clic. Se abrirá un menú pequeño.
+5. Haz clic en **`Download ZIP`**.
+6. Espera a que termine la descarga.
+7. Encuentra el archivo `.zip` en tu PC (normalmente en Descargas).
+8. Haz doble clic para extraer/descomprimir.
+9. Verás una carpeta. Si tiene un nombre raro, **renómbrala exactamente a `ines-game`**.
+10. Muévela a un lugar en tu PC donde la encuentres fácil (Escritorio, Documentos, etc).
 
-Git es una herramienta para guardar y traer versiones del proyecto. Si no sabes usar Git, usa la opción fácil del ZIP.
+**Opción B: Avanzada (CON Git)**
+
+Si sabes usar Git:
+1. Abre terminal.
+2. `git clone https://github.com/MarcosGiannini/ines-game.git`
+3. Entra: `cd ines-game`
+
+**Verifica:** Tienes una carpeta `ines-game` con un archivo `project.godot` dentro. ✅
 
 ## Paso 3: Abrir El Proyecto En Godot
 
-1. Abre Godot.
-2. En la primera pantalla, busca un botón llamado `Import`.
-3. Pulsa `Import`.
-4. Busca la carpeta `ines-game` en tu PC.
-5. Dentro de esa carpeta, selecciona el archivo:
+1. **Abre Godot** (si lo cerraste, vuelve a abrirlo).
+2. En la pantalla inicial verás botones. Busca uno que diga **`Import`** o **`Importar`**.
+3. Haz clic en **`Import`**.
+4. Se abrirá un navegador de carpetas. **Busca tu carpeta `ines-game`.**
+5. Dentro de esa carpeta, busca y selecciona el archivo **`project.godot`**.
+6. Haz clic en **`Open`** o **`Abrir`**.
+7. Si Godot pregunta algo, haz clic en **`Import & Edit`**.
 
-```text
-project.godot
-```
+Godot tardará 10-20 segundos en cargar el proyecto.
 
-6. Pulsa `Open` o `Abrir`.
-7. Pulsa `Import & Edit` si Godot lo muestra.
+**Cuando termine:**
+- Verás a la izquierda una estructura de carpetas (project explorer).
+- Verás en el centro la escena.
+- ✅ El proyecto está abierto.
 
-Ahora Godot debería abrir el proyecto.
-
-Si Godot muestra un error, no sigas. Copia el mensaje o haz una captura y pásasela a la IA.
+**Si ves errores:** ❌ Para aquí. Copia el mensaje de error y dile a la IA.
 
 ## Paso 4: Abrir La Pantalla De Prueba
 
-1. Dentro de Godot, busca la lista de archivos del proyecto.
-2. Abre la carpeta:
+1. Mira a la **izquierda** de la pantalla. Verás carpetas y archivos.
+2. Abre la carpeta que dice **`scenes`** (haciendo doble clic).
+3. Dentro, abre la carpeta que dice **`test`**.
+4. Verás un archivo que dice **`MovementTestRoom.tscn`**.
+5. Haz **doble clic** en ese archivo para abrirlo.
 
-```text
-scenes
-```
+Godot cargará la escena (tarda 3-5 segundos).
 
-3. Abre la carpeta:
+**Cuando termine:**
+- Verás en el centro la pantalla de prueba.
+- Verás un personaje (Ines, la niña) en la parte inferior izquierda.
+- Verás una forma rara gris (el enemigo de prueba).
+- ✅ La escena está abierta y lista.
 
-```text
-test
-```
+## Paso 5: Ejecutar La Pantalla De Prueba (El Juego)
 
-4. Haz doble clic en este archivo:
+1. Mira la **parte superior** de Godot.
+2. Busca un botón que parece un **triángulo de reproducir** (▶).
+3. Haz clic en ese botón. También puedes pulsar **F6** en el teclado.
 
-```text
-MovementTestRoom.tscn
-```
+Godot abrirá una **ventana nueva** con el juego.
 
-Esta es la pantalla de prueba del movimiento.
-
-## Paso 5: Ejecutar Solo Esta Pantalla
-
-1. Mira la parte superior de Godot.
-2. Pulsa el botón `Play Scene`.
-3. El icono parece un triángulo de reproducir.
-4. También puedes pulsar la tecla `F6`.
-
-Godot abrirá una ventana nueva con el juego.
-
-Si Godot pregunta qué escena quieres ejecutar, elige la escena actual.
+**Cuando se abra:**
+- Verás a Ines (personaje pequeño) en la pantalla.
+- Verás plataformas verdes donde está Ines.
+- ✅ El juego está corriendo.
 
 ## Paso 6: Controles
 
-Usa estas teclas:
+Usa estas teclas en el juego:
 
-- `A`: moverse a la izquierda
-- Flecha izquierda: moverse a la izquierda
-- `D`: moverse a la derecha
-- Flecha derecha: moverse a la derecha
-- `Espacio`: saltar
-- `W`: saltar
-- Flecha arriba: saltar
+| Acción | Tecla 1 | Tecla 2 | Tecla 3 |
+|--------|---------|---------|---------|
+| Mover izquierda | `A` | Flecha ← | |
+| Mover derecha | `D` | Flecha → | |
+| Saltar | `Espacio` | `W` | Flecha ↑ |
 
-## Paso 7: Qué Probar
+**Ejemplo:**
+- Pulsa `A` para que Ines vaya a la izquierda.
+- Pulsa `D` para que Ines vaya a la derecha.
+- Pulsa `Espacio` para que Ines salte.
 
-Prueba esto varias veces:
+## Paso 7: Qué Hacer (Pruebas Básicas)
 
-1. Pulsa izquierda y derecha.
-2. Cambia rápido de dirección.
-3. Muévete y luego suelta las teclas.
-4. Salta quieto.
-5. Salta mientras te mueves.
-6. Corre hacia un lado, gira, y vuelve al otro lado.
+**NO buscas ganar ni resolver nada. Solo quieres SENTIR cómo se mueve Ines.**
 
-No busques ganar ni completar un nivel. Esta pantalla solo sirve para sentir cómo se mueve Ines.
+Prueba esto varias veces cada uno:
 
-## Paso 8: Qué Debes Notar En Phase 2
+1. **Movimiento básico:** Pulsa `A` para ir izquierda, luego `D` para ir derecha.
+2. **Aceleración:** Mantén presionado `D` durante 2 segundos sin soltar. ¿Se siente rápida?
+3. **Giros rápidos:** Corre a la izquierda (`A`), luego de repente pulsa `D`. ¿Gira suave?
+4. **Flow:** Corre hacia un lado, suelta la tecla y mira qué pasa. ¿Ines sigue moviéndose un poco?
+5. **Saltos:** Pulsa `Espacio` varias veces. ¿Saltos se sienten fáciles de controlar?
 
-Ines debería sentirse:
+**Hazlo unas 5-10 veces cada prueba. Es solo para familiarizarte.**
 
-- rápida desde el primer toque;
-- fácil de controlar;
-- juguetona al girar;
-- con un poco de flow al soltar las teclas;
-- más divertida de mover que antes.
+## Paso 8: Qué Debes Notar En Phase 2 (Importante)
 
-Flow significa que el movimiento sigue teniendo energía, como si Ines quisiera seguir jugando, pero sin que el juego te quite el control.
+Después de probar, piensa en estas cosas. **Debes notar:**
 
-## Qué NO Debe Pasar
+- ✅ Ines se siente **rápida** desde el primer botón pulsado.
+- ✅ Ines se siente **juguetona** cuando cambias de dirección (giros no lentos).
+- ✅ Soltar las teclas mantiene un poco de **movimiento suave** (no se detiene drásticamente).
+- ✅ Los **saltos se sienten respuestos** (no flojos).
+- ✅ El **control en el aire es claro** (puedes moverte mientras saltas).
 
-- Ines no debe sentirse lenta.
-- Ines no debe sentirse pesada.
-- Ines no debe sentirse robótica.
-- Ines no debe deslizarse demasiado sin que tú quieras.
-- No deben aparecer armas.
-- No debe aparecer daño.
-- No deben aparecer cambios nuevos en enemigos.
-- No debe aparecer una pantalla más grande o un nivel completo.
+Si la mayoría de estos puntos se sienten bien, **Phase 2 está OK**.
 
-`EnemyBase` debe seguir siendo solo un objeto técnico de prueba.
+### Qué NO Debe Pasar
 
-## Qué Decirle A La IA Después De Probar
+- ❌ Ines **no debe sentirse lenta** o pesada.
+- ❌ Ines **no debe sentirse robótica** o sin vida.
+- ❌ Ines **no debe deslizarse sin control** sin que tú lo decidas.
+- ❌ **No deben aparecer armas** (el juego es pacífico).
+- ❌ **No deben aparecer daños** ni violencia.
+- ❌ **No deben haber cambios** en el enemigo gris de prueba.
+- ❌ **No debe ser una pantalla más grande** o un nivel completo.
 
-Cuando termines, dile a la IA frases simples como:
+---
 
-- "Se siente demasiado rápida."
-- "Se siente lenta al empezar."
-- "Gira bien."
-- "Gira demasiado brusco."
-- "Se desliza demasiado al soltar."
-- "Quiero más control en el aire."
-- "Me gusta como está."
+## Paso 9: Cierra El Juego Y Dile A La IA
 
-Con eso la IA podrá hacer la siguiente iteración de Phase 2.
+Cuando termines de probar:
+
+1. Cierra la ventana del juego (la que abriste en Paso 5).
+2. **Di a la IA frases simples,** como:
+   - "Se siente rápida."
+   - "Se siente lenta al empezar."
+   - "Gira bien."
+   - "Gira demasiado brusco."
+   - "Se desliza demasiado."
+   - "Me gusta como está."
+   - "Hay un error: [describe lo que pasó]"
+
+**Es suficiente.** La IA usará tu feedback para la siguiente iteración o para confirmar que Phase 2 está completo.

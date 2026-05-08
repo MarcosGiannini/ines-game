@@ -18,26 +18,49 @@ Próxima nota:
 
 ## Entradas
 
-### 2026-05-06 - Phase 2 - Movement Polish Iteration 1
+## Entradas
 
-Cambio:
-- Se aumentó la aceleración en suelo de `2800.0` a `3600.0`.
-- Se aumentó la aceleración en aire de `1900.0` a `2400.0`.
-- Se aumentó la velocidad máxima de `430.0` a `460.0`.
-- Se redujo la velocidad mínima de flow de `130.0` a `95.0`.
-- Se aumentó el empuje de giro de `1.2` a `1.45`.
+### 2026-05-08 - Phase 2 - Movement Polish Iteration 1 - READY FOR TESTING
 
-Sensación observada:
-- Pendiente de prueba manual en Godot.
+**Estado:** Los parámetros han sido ajustados. Ahora awaiting manual verification on Marcos's personal PC.
 
-Qué funciona:
-- La intención es que Ines arranque más rápido, gire con más fuerza y tenga menos deslizamiento artificial al soltar las teclas.
+**Cambios implementados:**
+- Aceleración en suelo: 2800.0 → **3600.0** (rápida desde el inicio)
+- Aceleración en aire: 1900.0 → **2400.0** (mejor control vertical)
+- Velocidad máxima: 430.0 → **460.0** (energía extra)
+- Velocidad mínima de flow: 130.0 → **95.0** (menos deslizamiento artificial)
+- Empuje de giro: 1.2 → **1.45** (giros juguetones)
 
-Qué no funciona:
-- Aún no se sabe hasta probarlo manualmente.
+**Sensación esperada después de cambios:**
+- Ines arranca MÁS RÁPIDA (acel +28.6%)
+- Los giros se sienten MÁS JUGUETONES (turn boost +20.8%)
+- Menos deslizamiento cuando sueltas botones (flow min -26.9%)
+- Mejor control en el aire (air accel +26.3%)
 
-Próxima nota:
-- Marcos debe probar si el movimiento se siente más rápido y juguetón sin sentir que el juego mueve a Ines por su cuenta.
+**Qué debe notar Marcos al testear:**
+1. ✅ Velocidad inicial rápida ← CRÍTICO
+2. ✅ Giros juguetones, no lentos ← CRÍTICO
+3. ✅ Momentum suave al soltar ← Importante
+4. ✅ Control en aire claro ← Importante
+5. ✅ Sin errores, crashes o comportamientos raros ← CRÍTICO
+
+**Qué NO debe pasar:**
+- ❌ Ines no debe sentirse fuera de control
+- ❌ No debe haber "deslizamiento loco" cuando no hay input
+- ❌ No debe haber mecanicas nuevas (doble salto, dash, etc)
+- ❌ Enemigo debe seguir siendo placeholder
+- ❌ No debe ser un nivel completo, solo la sala de prueba
+
+**Referencia para siguiente iteración:**
+Si Marcos dice "Se siente lenta" → reducir `minimum_flow_speed` más
+Si Marcos dice "Se desliza demasiado" → aumentar `minimum_flow_speed`
+Si Marcos dice "Giros bruscos" → bajar `turn_boost`
+Si Marcos dice "Giros suave" → subir `turn_boost`
+
+**Archivos de referencia:**
+- `/scripts/player/player_movement.gd` (líneas 4-8: tuning values)
+- `/PHASE_2_GUIDE.md` (guía sistemática de testing)
+- `/GUIA_PC_PERSONAL.md` (guía paso a paso para instalación)
 
 ### 2026-05-06 - Phase 1.6 - Setup
 
