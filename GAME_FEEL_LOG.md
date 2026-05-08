@@ -18,7 +18,41 @@ Próxima nota:
 
 ## Entradas
 
-## Entradas
+### 2026-05-08 - Phase 4 - Enemy Interaction Iteration 1 - READY FOR TESTING
+
+**Estado:** Enemy transformation enriquecida. Awaiting manual verification en PC de Marcos.
+
+**Cambios implementados:**
+- Color transición suave (0.5s, en lugar de instantáneo)
+- Escala animada: crece durante transformación, vuelve a normal
+- Sonido feedback: on touch + on transform
+- Luz: OmniLight2D que emite naranja suave
+- Partículas: CPUParticles2D suaves
+
+**Sensación esperada después de cambios:**
+- Transformación VISTA, no ignorada
+- Enemigo "acepta" cambio (no es violencia)
+- Esperanza en lugar de destrucción
+
+**Qué debe notar Marcos al testear:**
+1. ✅ Color transita gris → rosa (no instantáneo) ← CRÍTICO
+2. ✅ Tamaño cambia (crece, vuelve) ← CRÍTICO
+3. ✅ Escucha clic/sonido suave ← Importante
+4. ✅ Enemigo permanece (no desaparece) ← CRÍTICO
+5. ✅ Se siente transformación, no destrucción ← CRÍTICO
+
+**Qué NO debe pasar:**
+- ❌ Enemigo desaparece
+- ❌ Transformación es instantánea (sin animación)
+- ❌ Se siente violento o harsh
+- ❌ Lag o crash durante
+
+**Archivos de referencia:**
+- `/scripts/enemies/enemy_base.gd` (tweens, sounds, light)
+- `/scenes/enemies/EnemyBase.tscn` (nodos audio, partículas, luz)
+- `/PHASE_4_GUIDE.md` (testing)
+
+---
 
 ### 2026-05-08 - Phase 3 - Jump Depth Iteration 1 - READY FOR TESTING
 
