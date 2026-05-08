@@ -4,6 +4,8 @@ extends CharacterBody2D
 const PlayerMovementScript := preload("res://scripts/player/player_movement.gd")
 const PlayerJumpSystemScript := preload("res://scripts/player/player_jump.gd")
 
+signal jumped
+
 @export var gravity: float = 1600.0
 
 var movement := PlayerMovementScript.new()
@@ -32,7 +34,11 @@ func _physics_process(delta: float) -> void:
 		is_on_floor(),
 		delta
 	)
+
+	var velocity_before_jump := velocity.y
 	velocity = jump_system.consume_jump_if_available(velocity, is_on_floor())
+	if velocity.y < velocity_before_jump:  # Jump consumed (velocity.y becomes negative)
+		jumped.emit()
 
 	move_and_slide()
 

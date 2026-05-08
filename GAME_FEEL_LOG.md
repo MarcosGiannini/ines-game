@@ -18,7 +18,67 @@ Próxima nota:
 
 ## Entradas
 
-### 2026-05-08 - Phase 4 - Enemy Interaction Iteration 2 - ✅ COMPLETE
+### 2026-05-08 - Phase 5 - First Full Playable Area Iteration 1 - READY FOR TESTING
+
+**Estado:** Escena base completa con estructura emocional. Awaiting manual verification en PC de Marcos.
+
+**Cambios implementados:**
+- Scene `Phase5_FirstWorld.tscn` (5000px x 2500px game area)
+- Player instanceado al inicio
+- Ground continuo (StaticBody2D)
+- 5 plataformas elevadas en progresión: 700px → 550px → 400px → 250px → 300px
+- 5 enemigos posicionados estratégicamente (x = 800, 1600, 2400, 3200, 4000)
+- OmniLight2D cálido (naranja/oro) en horizonte (-500y) = Layer 1 presencia del padre
+- Sistema de echo en saltos (Layer 2) = sprite semi-transparente 0.1s después de saltar
+- Player.gd: Signal "jumped" emitido para activar echos
+
+**Estructura Emocional (5 Actos):**
+1. ACTO 1 (LA QUIETUD): Ines empieza aquí (x=400), mundo es tranquilo
+2. ACTO 2 (EL MOVIMIENTO): Requiere correr hacia primer enemigo (x=800)
+3. ACTO 3 (EL FLUJO): Saltos en cadena entre plataformas 2-4
+4. ACTO 4 (LA TRANSFORMACIÓN): Múltiples enemigos a transformar, plataformas altas
+5. ACTO 5 (EL RITMO NUEVO): Zona final abierta (x > 4000), mundo transformado
+
+**Sensación esperada después de cambios:**
+- Primera área jugable que demuestra MOVE → JUMP → CHAIN → FLOW
+- Ritmo natural emerge del diseño (no forzado)
+- Enemigos se transforman progresivamente
+- Compañía del padre es sutil pero perceptible
+- Todo junto = "juego real", no prototipo
+
+**Qué debe notar Marcos al testear:**
+1. ✅ Estructura tiene sentido (5 actos legibles) ← CRÍTICO
+2. ✅ Ritmo natural: correr → saltar → fluir ← CRÍTICO
+3. ✅ Enemigos se transforman al tocar con flujo suficiente ← CRÍTICO
+4. ✅ Luz horizonte visible (padre distante) ← Importante
+5. ✅ Echo de saltos visible (padre saltando conmigo) ← Importante
+6. ✅ Se siente esperanzador, no violento ← CRÍTICO
+7. ✅ Area se siente replayable ← Importante
+8. ✅ Sin crashes, lag, o errores técnicos ← CRÍTICO
+
+**Qué NO debe pasar:**
+- ❌ Plataformas no colisionan
+- ❌ Enemigos no se transforman
+- ❌ Jugador cae fuera del mundo
+- ❌ Se siente confuso o desconectado
+- ❌ Lag/crashes
+- ❌ Padre es intrusivo o confuso
+
+**Archivos de referencia:**
+- `/scenes/areas/Phase5_FirstWorld.tscn` (escena principal)
+- `/scripts/father/father_presence.gd` (sistema presencia padre)
+- `/scripts/player/player.gd` (signal jumped)
+- `/PHASE_5_GUIDE.md` (guía testing completa)
+
+**Referencia para siguiente iteración:**
+Si Marcos dice "Estructura confusa" → Ajustar posición enemigos o añadir visual cues
+Si Marcos dice "Demasiado fácil/difícil" → Ajustar altura plataformas o posición enemigos
+Si Marcos dice "No veo al padre" → Aumentar OmniLight2D opacity o mejorar echo visibility
+Si Marcos dice "Se siente bien" → Pasar a refinamiento (visual polish, sonido, etc.)
+
+---
+
+
 
 **Estado:** Transformation feels real, deliberate, and memorable. Phase 4 confirmed complete.
 
