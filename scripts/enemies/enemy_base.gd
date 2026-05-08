@@ -18,16 +18,10 @@ var _original_scale: Vector2 = Vector2.ONE
 
 @onready var visual: Polygon2D = $Visual
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
-@onready var light: OmniLight2D = $OmniLight2D
 
 func _ready() -> void:
 	_original_scale = scale
 	body_entered.connect(_on_body_entered)
-	if light:
-		light.energy = 0.0
-	if audio_player and not audio_player.stream:
-		# Crear un sonido placeholder suave
-		var audio_bus_layout = AudioServer.get_bus_index("Master")
 
 func _on_body_entered(body: Node) -> void:
 	if body.has_method("get_flow_strength"):
@@ -62,13 +56,6 @@ func _become_transformed() -> void:
 	scale_tween.set_ease(Tween.EASE_OUT)
 	scale_tween.tween_property(self, "scale", _original_scale * 1.2, transform_duration * 0.7)
 	scale_tween.tween_property(self, "scale", _original_scale, transform_duration * 0.3)
-
-	# Animate light intensity
-	if light:
-		var light_tween = create_tween()
-		light_tween.set_trans(Tween.TRANS_CUBIC)
-		light_tween.set_ease(Tween.EASE_OUT)
-		light_tween.tween_property(light, "energy", 1.0, transform_duration)
 
 	# Disable collision after transformation
 	set_deferred("monitoring", false)
