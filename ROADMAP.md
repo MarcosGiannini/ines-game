@@ -87,7 +87,7 @@ Validation steps:
 
 Execution summary: Adjusted movement parameters (acceleration +28.6%, turn_boost +20.8%, max_speed +7%, minimum_flow_speed -26.9%). Tested on Marcos's personal PC with full verification: movement feels fast and responsive, turning is playful, flow is natural, controls are fluid. All success criteria met. Phase 2 confirmed complete 2026-05-08.
 
-## Phase 3 - Jump Depth - 🔄 In Progress
+## Phase 3 - Jump Depth - ✅ Complete
 
 Goal: Deepen the jump system so chaining becomes expressive and reliable.
 
@@ -95,18 +95,20 @@ Deliverable: Improved jump buffering, coyote timing, chain windows, jump rhythm,
 
 Success Criteria:
 
-- Ground jumps trigger reliably.
-- Chained jumps feel intentional and readable.
-- Missed jumps feel fair rather than random.
-- Air control supports flow without making Ines feel weightless.
-- Jump depth improves the core loop without adding heavy mechanics.
+- ✅ Ground jumps trigger reliably.
+- ✅ Chained jumps feel intentional and readable.
+- ✅ Missed jumps feel fair rather than random.
+- ✅ Air control supports flow without making Ines feel weightless.
+- ✅ Jump depth improves the core loop without adding heavy mechanics.
 
 Validation steps:
 
-- Run jump-focused tests in the movement test room or a minimal jump test scene.
-- Confirm chained jumps feel intentional.
-- Confirm missed jumps feel fair.
-- Confirm jump changes do not make movement slow or heavy.
+- ✅ Run jump-focused tests in the movement test room.
+- ✅ Confirm chained jumps feel intentional.
+- ✅ Confirm missed jumps feel fair.
+- ✅ Confirm jump changes do not make movement slow or heavy.
+
+Execution summary: Tuned jump timing parameters (coyote_time +36%, jump_buffer_time +33%, chain_window +25%). Tested on Marcos's personal PC with full verification: ground jumps reliable, coyote time forgiving, buffer responsive, cadena intencionales, air control fluid. All success criteria met. Phase 3 confirmed complete 2026-05-08.
 
 ## Phase 4 - Enemy Interaction
 
