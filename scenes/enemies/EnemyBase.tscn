@@ -1,36 +1,9 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/enemies/enemy_base.gd" id="1_enemy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_enemy"]
 radius = 22.0
-
-[sub_resource type="Curve" id="Curve_particles"]
-max_value = 0.5
-points = PackedVector2Array(0, 0.3, 0.5, 0.5, 1, 0)
-
-[sub_resource type="CurveTexture" id="CurveTexture_particles"]
-curve = SubResource("Curve_particles")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_enemy"]
-lifetime_randomness = 0.3
-emission_shape = 1
-emission_sphere_radius = 30.0
-direction = Vector3(0, 0, 0)
-spread = 180.0
-gravity = Vector3(0, 0, 0)
-initial_velocity_min = 20.0
-initial_velocity_max = 40.0
-scale_min = 0.3
-scale_max = 0.8
-scale_curve = SubResource("CurveTexture_particles")
-color_ramp = SubResource("GradientTexture1D_enemy")
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_enemy"]
-gradient = SubResource("Gradient_enemy")
-
-[sub_resource type="Gradient" id="Gradient_enemy"]
-colors = PackedColorArray(1, 1, 1, 0.5, 1, 0.78, 0.92, 0.8, 1, 0.78, 0.92, 0)
 
 [node name="EnemyBase" type="Area2D"]
 collision_layer = 4
@@ -53,9 +26,3 @@ energy = 0.0
 color = Color(1, 0.65, 0, 1)
 range = 80.0
 fade = 2.0
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-emitting = false
-amount = 20
-lifetime = 1.0
-process_material = SubResource("ParticleProcessMaterial_enemy")

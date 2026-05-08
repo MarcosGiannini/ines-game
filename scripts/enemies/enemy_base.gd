@@ -25,6 +25,9 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	if light:
 		light.energy = 0.0
+	if audio_player and not audio_player.stream:
+		# Crear un sonido placeholder suave
+		var audio_bus_layout = AudioServer.get_bus_index("Master")
 
 func _on_body_entered(body: Node) -> void:
 	if body.has_method("get_flow_strength"):
@@ -66,10 +69,6 @@ func _become_transformed() -> void:
 		light_tween.set_trans(Tween.TRANS_CUBIC)
 		light_tween.set_ease(Tween.EASE_OUT)
 		light_tween.tween_property(light, "energy", 1.0, transform_duration)
-
-	# Play sound
-	if audio_player and audio_player.stream:
-		audio_player.play()
 
 	# Disable collision after transformation
 	set_deferred("monitoring", false)
