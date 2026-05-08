@@ -10,7 +10,7 @@ enum State {
 }
 
 @export var required_flow_strength: float = 0.35
-@export var transform_duration: float = 0.5
+@export var transform_duration: float = 1.0
 @export var transform_color: Color = Color(1.0, 0.78, 0.92, 1.0)
 
 var state: State = State.ACTIVE
@@ -54,7 +54,7 @@ func _become_transformed() -> void:
 	var scale_tween = create_tween()
 	scale_tween.set_trans(Tween.TRANS_CUBIC)
 	scale_tween.set_ease(Tween.EASE_OUT)
-	scale_tween.tween_property(self, "scale", _original_scale * 1.2, transform_duration * 0.7)
+	scale_tween.tween_property(self, "scale", _original_scale * 1.5, transform_duration * 0.7)
 	scale_tween.tween_property(self, "scale", _original_scale, transform_duration * 0.3)
 
 	# Disable collision after transformation
