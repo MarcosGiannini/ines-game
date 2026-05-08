@@ -3,9 +3,9 @@ extends RefCounted
 
 var jump_velocity: float = -610.0
 var chain_jump_velocity: float = -660.0
-var coyote_time: float = 0.11
-var jump_buffer_time: float = 0.12
-var chain_window: float = 0.24
+var coyote_time: float = 0.15
+var jump_buffer_time: float = 0.16
+var chain_window: float = 0.30
 
 var _time_since_floor: float = 0.0
 var _jump_buffer: float = 0.0

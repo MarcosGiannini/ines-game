@@ -87,7 +87,7 @@ Validation steps:
 
 Execution summary: Adjusted movement parameters (acceleration +28.6%, turn_boost +20.8%, max_speed +7%, minimum_flow_speed -26.9%). Tested on Marcos's personal PC with full verification: movement feels fast and responsive, turning is playful, flow is natural, controls are fluid. All success criteria met. Phase 2 confirmed complete 2026-05-08.
 
-## Phase 3 - Jump Depth
+## Phase 3 - Jump Depth - 🔄 In Progress
 
 Goal: Deepen the jump system so chaining becomes expressive and reliable.
 
