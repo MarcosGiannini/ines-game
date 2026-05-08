@@ -28,23 +28,111 @@ Cada salto es una decisión. Cada giro es una pregunta. Cada "flow" (momentum co
 
 **Ines lidera.** Ella entra primero en lo desconocido.
 
-### El Padre (Invisible Pero Presente)
+### El Padre (La Presencia Múltiple Y Sutil)
 
-El padre nunca aparece en pantalla, pero **su presencia es el fundamento**.
+El padre **NO aparece en pantalla, pero su presencia es SENTIDA en cuatro capas simultáneas.**
 
-Él es:
-- **Apoyo silencioso:** No controla, sino acompaña
-- **Confianza:** "Sé que puedes, voy contigo"
-- **Protección emocional:** "Lo que ves es real, pero estamos juntos"
-- **Ritmo:** A veces, suave feedback (sonido mínimo, luz suave) que dice "aquí estoy"
+#### Capa 1: Visual-Luz (La Orientación)
 
-**El padre es la razón por la que Ines se atreve a moverse.**
+**¿Qué es?** Una **luz cálida naranja/dorada constante en el horizonte detrás de Ines**.
 
-### Juntos
+**Cómo funciona:**
+- Siempre visible, pero NO prominente (30-40% opacidad)
+- En la parte trasera, lejana (no interfiere con gameplay)
+- Se mueve LENTAMENTE, siguiendo la cámara (no es una bombilla fija)
+- Color: Naranja cálido (RGB 255, 165, 0 o similar)
 
-Ines + Padre = **esperanza en acción**.
+**Lo que comunica:** "Hay una dirección segura. Hay alguien mirándote desde ahí."
 
-No es una historia de "salvar al papá" ni "papá rescata a Ines". Es una historia de **compañía en la transformación**.
+**Implementación:** Post-process effect o layer visual adicional.
+
+---
+
+#### Capa 2: Movimiento-Eco (La Respuesta)
+
+**¿Qué es?** Cuando Ines salta, hay un **pequeño "eco" visual que aparece debajo o detrás 0.1 segundos después**.
+
+**Cómo funciona:**
+- Apenas visible (semi-transparente, 20-30% opacidad)
+- Forma similar a Ines pero difusa/fantasmal
+- Desaparece en 0.3 segundos
+- Se activa CADA VEZ que Ines salta
+- Color: Más luminoso/blanco que Ines
+
+**Lo que comunica:** "Cada vez que te atreves, algo detrás de ti responde. No estás solo."
+
+**Implementación:** Script que genera sprite temporal en `position - offset` cuando salta.
+
+---
+
+#### Capa 3: Sonido-Latido (La Intimidad)
+
+**¿Qué es?** Un **sonido MinÍMO y casi imperceptible: respiración tranquila sutilmente desfasada con Ines**.
+
+**Cómo funciona:**
+- Volumen muy bajo (-20dB o menos)
+- Respiración suave, como "hahhh... shhhhh..." muy lento
+- **Ritmo:** Ligeramente diferente al ritmo de Ines (no sincronizado, sino compasivo)
+- Presente en TODO el juego, pero consciente solo si se escucha activamente
+- Desaparece en momentos de tranquilidad total (efecto: "ahora descansamos juntos")
+
+**Lo que comunica:** "Estoy aquí. Respiro contigo. Pero no controlo tu ritmo."
+
+**Implementación:** Audio looping baja volumen, mezclado muy suavemente.
+
+---
+
+#### Capa 4: Luz-Seguimiento (La Compañía)
+
+**¿Qué es?** Cuando Ines se mueve, hay una **luz local suave que "la sigue" desde atrás**.
+
+**Cómo funciona:**
+- Spotlight o point light detrás de Ines
+- Color: Naranja/dorado (mismo que horizonte)
+- Intensidad baja-media (no ciega, solo orienta)
+- **Distancia:** Siempre a un offset constante detrás de Ines
+- Se enciende más cuando Ines está en "flow" (momentum)
+- Se atenúa levemente cuando cae o enfrenta enemigos
+
+**Lo que comunica:** "Te sigo. Cuando tienes momentum, brillo más. Cuando tienes miedo, estoy aquí de todos modos."
+
+**Implementación:** Light nodo seguctor con offset y damping suave.
+
+---
+
+### Juntos: Las Cuatro Capas
+
+**Visualmente:**
+- Luz lejana en horizonte
+- Luz local detrás moviéndose con ella
+- Eco visual en saltos
+- Silencio momentáneo con respiración
+
+**Emocionalmente:**
+- "Hay dirección"
+- "Hay respuesta"
+- "Hay compañía"
+- "Hay ritmo compartido"
+
+**Nunca dice palabras. Siempre comunica: "No estás solo. Confío en ti. Te acompaño."**
+
+---
+
+### Lo Que El Padre NO Hace
+
+- ❌ NO habla
+- ❌ NO aparece en pantalla
+- ❌ NO controla o redirige (siempre atrás, nunca adelante)
+- ❌ NO interfiere con gameplay
+- ❌ NO es agresivo ("mira, yo también puedo")
+
+### Lo Que El Padre SÍ Hace
+
+- ✅ Sigue
+- ✅ Responde
+- ✅ Acompaña
+- ✅ Confía
+- ✅ Está presente incluso en la quietud
 
 ---
 
@@ -268,7 +356,91 @@ Cuando alguien juegue Ines Game, debería sentir esto:
 
 ---
 
-## Para Marcos (Y Futura IA)
+## APÉNDICE: IMPLEMENTACIÓN DE LA PRESENCIA DEL PADRE
+
+**Esta sección es para desarrolladores future (Marcos o IA).**
+
+### Checklist De Desarrollo
+
+#### Fase A: Luz Horizonte (Prioridad ALTA)
+- [ ] Post-process o layer visual con luz naranja lejana
+- [ ] Opacidad: 30-40%
+- [ ] Seguir lentamente la cámara (offset pequeño)
+- [ ] NO debe interfierir con gameplay
+- [ ] Test: Juega 5 minutos, ¿se siente a que hay esperanza en esa dirección?
+
+#### Fase B: Echo De Salto (Prioridad ALTA)
+- [ ] Script que spike sprite fantasmal en `player.position - offset`
+- [ ] Trigger: Cada vez que `PlayerJumpSystem.consume_jump_if_available` se ejecuta
+- [ ] Duración: 0.3 segundos
+- [ ] Color: Blanco/transparente, 20-30% opacidad
+- [ ] Test: Haz 10 saltos, ¿ves el eco cada vez?
+
+#### Fase C: Sonido Respiración (Prioridad MEDIA)
+- [ ] Grabar o generar audio: respiración suave, ~0.6s por ciclo
+- [ ] Loop: Sí
+- [ ] Volumen: -20dB o más silencioso
+- [ ] Mezcla: Apenas audible incluso en silencio total
+- [ ] Test: ¿Se siente presencia sin ser molesto?
+
+#### Fase D: Luz Seguimiento (Prioridad MEDIA)
+- [ ] Point light o spotlight detrás de Ines
+- [ ] Offset: (-100, -50) o similar (atrás y ligeramente abajo)
+- [ ] Color: Naranja (mismo que horizonte)
+- [ ] Intensidad dinámica:
+  - Normal: 0.5
+  - High flow (abs(velocity.x) > movement.max_speed * 0.7): 0.8
+  - Bajo estrés (enemigo cercano): 0.3
+  - Reposo total: 0.2
+- [ ] Test: ¿La luz comunica "te sigo"?
+
+---
+
+### Guía de Tono Para Cada Capa
+
+| Capa | Tono | Riesgo | Ajuste |
+|------|------|--------|--------|
+| Luz horizonte | "Orientación" | Demasiada visibilidad = distrae | Reduce opacidad |
+| Echo saltos | "Respuesta" | Demasiado frecuente = molesto | Haz transparente |
+| Sonido respiración | "Intimidad" | Demasiado audible = invasivo | Más silencio |
+| Luz seguimiento | "Compañía" | Demasiada = controla | Reduce rango |
+
+---
+
+### Testing Framework
+
+Después que implementes, responde:
+
+1. **Sin buscar activamente:**
+   - ¿Sientes presencia sin verla?
+   - ¿Juega natural sin distracción?
+
+2. **Buscando activamente:**
+   - ¿Ves las 4 capas cuando las investigas?
+   - ¿Funcionan juntas o por separado?
+
+3. **Emocionalmente:**
+   - ¿No estás solo?
+   - ¿Confías en continuar?
+   - ¿Se siente hope, no fear?
+
+---
+
+### Iteración Esperada
+
+**Si se siente INVASIVO o FALSO:**
+- Reduce opacidades un 20%
+- Baja volumen del sonido más
+- Reduce intensidad de luces
+- "Menos es más"
+
+**Si se siente INVISIBLE o AUSENTE:**
+- Aumenta contraste (luz horizonte más saturada)
+- Haz echo más visible momentáneamente
+- Aumenta volumen respiración mínimo 3dB
+- Aumenta rango de luz seguimiento
+
+**La meta:** "Siento que alguien me respalda, pero el juego es mío."
 
 Este documento es **el norte**. 
 
