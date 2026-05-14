@@ -173,3 +173,14 @@ Controles por defecto:
 - Mover izquierda: `A` o flecha izquierda
 - Mover derecha: `D` o flecha derecha
 - Saltar: `Espacio`, `W` o flecha arriba
+
+## Plantilla Base Reutilizable
+
+Desde el 2026-05-14 se adopta una regla permanente sobre testing manual:
+
+- La plantilla base oficial de testing manual es `phase5-test.md` (mantenida en el repo padre / AI CORE).
+- Cada test manual de cualquier fase futura debe **reutilizar esa plantilla** y adaptarla a la fase concreta.
+- No se deben crear guías de testing nuevas desde cero salvo petición explícita de Marcos.
+- La estructura mínima a mantener en cada adaptación incluye: objetivo, preparación, controles, checklist por bloques, qué debe pasar / qué NO debe pasar, plantilla de feedback e interpretación.
+- Una fase **no se considera validada** hasta que exista una entrada de feedback humano en `GAME_FEEL_LOG.md`. "Implementada" y "validada" son estados distintos.
+- El nivel de la guía debe seguir siendo beginner-friendly: Marcos no escribe código, la guía debe poder seguirla cualquier persona con Godot instalado.

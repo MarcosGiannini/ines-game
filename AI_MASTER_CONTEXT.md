@@ -106,3 +106,26 @@ Never:
 - hide important tradeoffs from Marcos
 
 Marcos will not write code. AI must make the project understandable, controlled, and safe to continue.
+
+## Current Strategic Direction (Provisional) — Route A: Short Emotional Indie
+
+As of 2026-05-14, after a full strategic reaudit, the project adopts **Route A — Short Emotional Indie** as its provisional direction. This direction is provisional until Phase 5 is manually tested by Marcos.
+
+Route A formula:
+
+- One single world.
+- 4 to 6 areas.
+- 30 to 60 minutes of total experience.
+- Movement as the central language.
+- Transformation of fears as the core verb.
+- Father presence limited, in the first game, to two subtle layers:
+  1. Warm horizon light.
+  2. Jump echo.
+- The other two father layers (breathing/sound, follow light) remain as long-term vision, not as obligations for the first game.
+- Continuity dictamen: **no reset**, continue with the current base.
+- Phase 5 implemented but pending manual game-feel test.
+- Steam is **not** an operational objective at this stage.
+- Any manual test must reuse the existing `phase5-test.md` template as base; new testing guides must not be created from scratch unless Marcos explicitly requests it.
+- A phase is not considered validated until human feedback is registered in `GAME_FEEL_LOG.md`.
+
+The original identity, non-negotiable rules, emotional vision, and player philosophy stated above remain fully in force. Route A is a scope and direction decision, not a redefinition of the game's soul.

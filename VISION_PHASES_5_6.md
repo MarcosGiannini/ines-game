@@ -4,6 +4,32 @@
 
 ---
 
+## Nota de alcance (2026-05-14) — Ajuste hacia Ruta A
+
+A partir del 2026-05-14, el proyecto adopta provisionalmente **Ruta A — Indie Emocional Corto** como dirección operativa. Esta nota no reemplaza la visión emocional descrita debajo, sino que **acota su alcance para el primer juego**.
+
+Lo que sigue siendo cierto (visión a largo plazo):
+
+- La identidad emocional completa: la esperanza en movimiento transforma el miedo.
+- La relación padre-hija como capas de presencia sutil.
+- Las cuatro capas del padre como horizonte de diseño.
+- La estructura de 5 actos emocionales.
+- Los enemigos como miedos transformables, nunca destruidos.
+
+Lo que se acota para el primer juego (Ruta A):
+
+- Un solo mundo, no varios.
+- 4 a 6 áreas, no expansión grande.
+- 30 a 60 minutos de experiencia total.
+- Padre limitado a **2 capas iniciales**: luz de horizonte + eco de salto. Las otras dos capas (respiración/sonido íntimo, luz de seguimiento) quedan como visión futura.
+- El plan operativo de Phase 6 y posteriores ahora vive en `ROADMAP.md`, no aquí. El detalle de fases futuras de este documento queda como horizonte conceptual, no como obligación del primer juego.
+- Steam no es objetivo operativo todavía.
+- Phase 5 sigue pendiente de test manual; ninguna decisión posterior es definitiva hasta tener ese feedback.
+
+El alma del juego no cambia. Cambia el tamaño realista del primer entregable.
+
+---
+
 ## 1. EL CORAZÓN DE INES GAME
 
 Ines Game no es un platformer más.

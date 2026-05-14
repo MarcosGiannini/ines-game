@@ -18,6 +18,43 @@ Próxima nota:
 
 ## Entradas
 
+### 2026-05-14 - Pre-test Phase 5 / Route A alignment
+
+**Fecha:** 2026-05-14
+
+**Fase:** Pre-test Phase 5 / Route A alignment
+
+**Cambio:**
+
+- Se registra dictamen de continuidad: no reset, continuar con base actual.
+- Se adopta Ruta A (Indie Emocional Corto) como direccion provisional.
+- Se confirma que Phase 5 sigue pendiente de test manual.
+- Se limita la presencia del padre en el primer juego a 2 capas: luz de horizonte + eco de salto.
+- Ruta B y Ruta C completas quedan aparcadas.
+- Steam sale del vocabulario operativo hasta que exista vertical slice.
+
+**Sensacion observada:**
+
+- No testada en Godot en este PC corporativo sin Godot instalado.
+
+**Que funciona:**
+
+- Contexto estrategico alineado entre repo del juego y AI CORE.
+- Documentacion compactada hacia Ruta A.
+- Plantilla reutilizable de testing (phase5-test.md) declarada como base permanente.
+
+**Que no funciona:**
+
+- Falta feedback real de Marcos jugando `Phase5_FirstWorld.tscn`.
+- Game feel sigue sin validar.
+- Consecuencia jugable de transformacion sin decidir hasta despues del test.
+
+**Proxima nota:**
+
+- Registrar resultados reales del test Phase 5 usando phase5-test.md como plantilla.
+
+---
+
 ### 2026-05-08 - Phase 5 - First Full Playable Area Iteration 1 - READY FOR TESTING
 
 **Estado:** Escena base completa con estructura emocional. Awaiting manual verification en PC de Marcos.

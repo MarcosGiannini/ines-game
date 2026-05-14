@@ -171,3 +171,116 @@ Implementation status:
 - Emotional validation: does it feel like the journey described?
 - Performance check: no lag, no crashes
 - Adjustments to platform distances/heights if needed
+
+## Strategic Direction (Provisional, 2026-05-14) — Route A: Short Emotional Indie
+
+The project adopts Route A as its provisional strategic direction: a short, finished, emotionally honest indie platformer. One single world, 4 to 6 areas, 30 to 60 minutes of total experience, father presence limited to two subtle layers (horizon light + jump echo), and no expansion until a vertical slice is validated. Route A is provisional until Phase 5 is manually tested by Marcos. The continuity dictamen is **no reset** — continue with the current base, adapt only what the test reveals.
+
+The phases below replace the previous Phase 6+ plan from `VISION_PHASES_5_6.md` (multiple worlds, four father layers, large expansion). The original vision remains valid as long-term horizon; the phases below are the operational path.
+
+## Phase 6 — Vertical Slice Definition (Route A) — 🔄 Pending
+
+Goal: define with precision what the Route A vertical slice is, based on the result of the Phase 5 manual test.
+
+Deliverable: a written definition block (3 to 5 paragraphs) inside `AI_MASTER_CONTEXT.md` or this `ROADMAP.md` describing the scope of the vertical slice (target area, target duration, expected emotional beats, success criteria).
+
+Success criteria:
+
+- Marcos can explain the vertical slice in five sentences.
+- The definition is grounded in the actual Phase 5 feedback, not in theory.
+- Scope stays within Route A (one area, no new mechanics, no extra worlds).
+
+Stop criterion:
+
+- If Phase 5 reveals structural problems with the core systems, pause Phase 6 and review systems first.
+
+Requires: documentation only. No code.
+
+## Phase 7 — Playable Consequence of Transformation — 🔄 Pending
+
+Goal: ensure that transforming an enemy changes something persistent in the world (one single convention, applied consistently). Eliminates the risk of "decorative transformation".
+
+Deliverable: a minimal system where transforming an enemy reveals/triggers a platform, a light, or a path. One convention only, not multiple systems.
+
+Success criteria:
+
+- Manual test (using `phase5-test.md` as template) shows block C in green with the new mechanic.
+- The transformation feels like a verb, not an animation.
+- No combat language, no destruction, no violence.
+
+Stop criterion:
+
+- If adding the consequence breaks flow or feels forced, retreat and reconsider before continuing.
+
+Requires: code + test.
+
+## Phase 8 — Vertical Slice Playable — 🔄 Pending
+
+Goal: deliver one area polished enough to demonstrate the 5 emotional acts with real playable consequence, even with placeholder art.
+
+Deliverable: a playable 3 to 5 minute scene (probably Phase 5 adapted) with at least one explicitly designed "memorable moment".
+
+Success criteria:
+
+- An external tester (not Marcos, not AI) describes the area emotionally without being explained the design.
+- The 5 acts are readable through play, not through text.
+- The session feels like a real game, not a prototype.
+
+Stop criterion:
+
+- If after polish the area still feels empty, reconsider Route A direction before adding more areas.
+
+Requires: code + minimal art placeholders + test.
+
+## Phase 9 — Minimal Visual Identity — 🔄 Pending
+
+Goal: replace placeholder visuals with a coherent, minimal-but-own visual direction (limited palette, recognizable Ines silhouette, parallax backgrounds in 2 to 3 layers).
+
+Deliverable: the vertical slice scene with minimal proprietary art direction integrated.
+
+Success criteria:
+
+- Three seconds of gameplay are visually identifiable as Ines Game.
+- Art is coherent, not photorealistic; identity over fidelity.
+- No regression in performance or readability.
+
+Stop criterion:
+
+- If the work requires an external collaborator that is not available, pause.
+
+Requires: art assets + code integration.
+
+## Phase 10 — Minimal Audio — 🔄 Pending
+
+Goal: add simple ambient music + 8 to 10 key SFX so the vertical slice has emotional layering through sound.
+
+Deliverable: the vertical slice with integrated audio (music + footsteps + jump + landing + transformation + act transitions).
+
+Success criteria:
+
+- Playing with sound feels noticeably different from playing in silence.
+- Audio reinforces calm/flow/transformation moments without intrusive cues.
+- No tutorial-like voiceover, no narrator.
+
+Stop criterion:
+
+- Without minimal composer or audio resource, freeze this phase and continue with Phase 11 conditionally.
+
+Requires: audio assets + code integration.
+
+## Phase 11 — Expansion Decision — 🔄 Pending
+
+Goal: decide, based on real feedback from external testers on the vertical slice, whether to build the remaining 3 to 5 areas of the short game, or whether the vertical slice is itself the deliverable (learning project, portfolio piece, internal milestone).
+
+Deliverable: a written decision registered in `ROADMAP.md` and `GAME_FEEL_LOG.md`.
+
+Success criteria:
+
+- Decision is informed by external feedback, not only by Marcos and AI.
+- Decision is honest: either commit to a full short game or close the project as a vertical slice.
+
+Stop criterion:
+
+- If no external player has tested the vertical slice, do not decide.
+
+Requires: documentation only.

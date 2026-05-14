@@ -46,6 +46,19 @@ No se trata como un prototipo desechable. El desarrollo debe priorizar:
 - transformación de enemigos sin violencia;
 - mantenimiento a largo plazo.
 
+## Dirección Estratégica Actual (Provisional)
+
+Desde el 2026-05-14, el proyecto adopta **Ruta A — Indie Emocional Corto** como dirección provisional:
+
+- un solo mundo;
+- 4 a 6 áreas;
+- 30 a 60 minutos de experiencia total;
+- padre limitado a 2 capas iniciales (luz de horizonte + eco de salto);
+- sin expansión grande hasta tener vertical slice validado;
+- Steam fuera del vocabulario operativo de momento.
+
+Esta dirección es **provisional** hasta que Phase 5 sea testeada manualmente. La continuidad oficial: no reset, continuar con la base actual. Más detalle en [ROADMAP.md](ROADMAP.md) y [AI_MASTER_CONTEXT.md](AI_MASTER_CONTEXT.md).
+
 ## Estado Actual
 
 El proyecto contiene ahora:
